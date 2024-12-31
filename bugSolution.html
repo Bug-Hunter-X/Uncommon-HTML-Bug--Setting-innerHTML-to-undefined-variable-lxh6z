@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    let myUndefinedVariable; // Variable is declared but not initialized
+    let myDiv = document.getElementById('myDiv');
+    if (typeof myUndefinedVariable !== 'undefined') {
+      myDiv.innerHTML = myUndefinedVariable;
+    } else {
+      myDiv.innerHTML = "Variable was not defined. Setting default value.";
+    }
+  </script>
+</body>
+</html>
