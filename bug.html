@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML with an expression that evaluates to undefined
+    document.getElementById('myDiv').innerHTML = myUndefinedVariable; 
+  </script>
+</body>
+</html>
